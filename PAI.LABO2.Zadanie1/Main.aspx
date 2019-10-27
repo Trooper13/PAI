@@ -13,13 +13,13 @@
             <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
             <br />
             Podaj swoją płeć:
-            <asp:DropDownList ID="sexDropDownList" runat="server">
+            <asp:DropDownList ID="sexDropDownList" runat="server" OnSelectedIndexChanged="Page_Load">
                 <asp:ListItem Value="K">Kobieta</asp:ListItem>
                 <asp:ListItem Value="M">Mężczyzna</asp:ListItem>
             </asp:DropDownList>
             <br />
             <br />
-            <asp:Button ID="showButton" runat="server" Text="Wyświetl" OnClick="showButton_Click"/>
+            <asp:Button ID="showButton" runat="server" Text="Wyświetl" OnClick="showButton_Click" Visible="False"/>
         </div>
     </form>
 </body>

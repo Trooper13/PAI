@@ -7,11 +7,6 @@ using System.Web.UI.WebControls;
 
 public partial class Main : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-
     protected void showButton_Click(object sender, EventArgs e)
     {
         if (sexDropDownList.Text == "K")
