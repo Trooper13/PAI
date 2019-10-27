@@ -47,6 +47,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Zadanie3", "Zadanie3\", "{8
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LABO2.ZAD3.AnkietaRowerowa", "LABO2.ZAD3.AnkietaRowerowa\", "{D98CE38E-DDCF-4503-A1B6-6DC7690E6A57}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55474"
+		Debug.AspNetCompiler.PhysicalPath = "LABO2.ZAD3.AnkietaRowerowa\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55474\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55474"
+		Release.AspNetCompiler.PhysicalPath = "LABO2.ZAD3.AnkietaRowerowa\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55474\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55474"
+		SlnRelativePath = "LABO2.ZAD3.AnkietaRowerowa\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +78,8 @@ Global
 		{7A7A3D62-73D7-4F7F-B1AF-54E96123F0A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C099B5B-F199-47CA-9841-90D9658B8235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C099B5B-F199-47CA-9841-90D9658B8235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98CE38E-DDCF-4503-A1B6-6DC7690E6A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98CE38E-DDCF-4503-A1B6-6DC7690E6A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
