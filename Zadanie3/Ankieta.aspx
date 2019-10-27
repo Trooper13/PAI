@@ -54,8 +54,8 @@
             Płeć:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList style="margin: 5px" ID="DropDownList1" runat="server" Width="126px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
                 <asp:ListItem></asp:ListItem>
-                <asp:ListItem Value="1" Text="Kobieta">Kobieta</asp:ListItem>
-                <asp:ListItem Value="2" Text="Mężczyzna">Mężczyzna</asp:ListItem>
+                <asp:ListItem Value="Kobieta" Text="Kobieta">Kobieta</asp:ListItem>
+                <asp:ListItem Value="Mężczyzna" Text="Mężczyzna"></asp:ListItem>
             </asp:DropDownList>
 
             <br />
