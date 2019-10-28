@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Ankieta.aspx.cs" Inherits="Ankieta" %>
+<asp:AdRotator runat="server" AdvertisementFile="~/Adv/adv.xml"></asp:AdRotator>
 
 <!DOCTYPE html>
 
@@ -13,6 +14,7 @@
                 <asp:View ID="ankietaGlowna" runat="server">
                     Imię:<br />
                     <asp:TextBox ID="imieTextBox" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="imieTextBox" ErrorMessage="Pole Imię jest wymagane">*</asp:RequiredFieldValidator>
                     <br />
                     Płeć:<br />
                     <asp:DropDownList ID="plecDropDownList" runat="server">
@@ -23,9 +25,12 @@
                     <br />
                     e-mail:<br />
                     <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="emailTextBox" ErrorMessage="Pole email jest wymgane">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="emailTextBox" ErrorMessage="Nieporpawny adres email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                     <br />
                     Telefon:<br />
                     <asp:TextBox ID="telefonTextBox" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="telefonTextBox" ErrorMessage="Niepoprawny nr telefonu" ValidationExpression="([0-9]+)$">*</asp:RegularExpressionValidator>
                     <br />
                     Ulica:<br />
                     <asp:TextBox ID="ulicaTextBox" runat="server"></asp:TextBox>
@@ -45,7 +50,9 @@
                     <asp:MultiView ID="ankietaMultiView" runat="server">
                         <asp:View ID="nowyView" runat="server">
                             Wzrost:<br />
-                            <asp:TextBox ID="wzrostTextBox" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="wzrostTextBox" runat="server" Width="128px"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="wzrostTextBox" ErrorMessage="Niepoprawny wzrost - podaj wzrost w centymetrach">*</asp:RegularExpressionValidator>
+                            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="wzrostTextBox" ErrorMessage="Podaj poprawny wzrost w przedziale 50-250cm" MaximumValue="250" MinimumValue="50" Type="Integer">*</asp:RangeValidator>
                             <br />
                             Rama roweru:<br />
                             <asp:DropDownList ID="ramaDropDownList" runat="server">
@@ -83,12 +90,13 @@
                             </asp:RadioButtonList>
                             od:
                             <asp:TextBox ID="odTextBox" runat="server"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="odTextBox" ErrorMessage="Nieprawidłowa kwota - podaj zaokrąglając do pełnych złotych" ValidationExpression="([0-9]+)$">*</asp:RegularExpressionValidator>
                             <br />
                             do:
                             <asp:TextBox ID="doTextBox" runat="server"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="doTextBox" ErrorMessage="Nieprawidłowa kwota - podaj zaokraglając do pełnych złotych" ValidationExpression="([0-9]+)$">*</asp:RegularExpressionValidator>
                             <br />
                         </asp:View>
-                        <br />
                         <asp:View ID="wycieczkiView" runat="server">
                             Rodzaj posiadanego roweru:<br />
                             <asp:ListBox ID="posiadaListBox" runat="server">
@@ -112,7 +120,7 @@
                                 <WeekendDayStyle BackColor="#FFFFCC" />
                             </asp:Calendar>
                             <br />
-                            Data następnej wycieczki:<asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" OnSelectionChanged="Calendar2_SelectionChanged" Width="200px">
+                            Data następnej wycieczki:<asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
                                 <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                                 <NextPrevStyle VerticalAlign="Bottom" />
                                 <OtherMonthDayStyle ForeColor="#808080" />
@@ -149,6 +157,7 @@
                 </asp:View>
             </asp:MultiView>
         </div>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
     </form>
 </body>
 </html>

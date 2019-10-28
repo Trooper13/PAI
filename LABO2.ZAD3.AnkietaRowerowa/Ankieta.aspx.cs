@@ -18,19 +18,22 @@ public partial class Ankieta : System.Web.UI.Page
                 ankietaMultiView.SetActiveView(nowyView);
             }
             else 
-                if (Request.QueryString["wycieczki"] == "wycieczki")
+                if (Request.QueryString["view"] == "wycieczki")
                 {
                     ankietaMultiView.SetActiveView(wycieczkiView);
                 }
                 else
                 {
-                Response.Redirect("~/Default.aspx");
+                    Response.Redirect("~/Default.aspx");
                 }
         }
     }
 
     protected void wyswietlButton_Click(object sender, EventArgs e)
     {
-        mainMultiView.SetActiveView(podsumowanie);
+        if (IsValid)
+        {
+            mainMultiView.SetActiveView(podsumowanie);
+        }
     }
 }
