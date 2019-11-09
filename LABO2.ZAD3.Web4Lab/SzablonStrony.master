@@ -18,9 +18,7 @@
                 <asp:SiteMapDataSource ID="MapaSerwisu" runat="server" ShowStartingNode="False" />
                 <div id="Menu">
                     <asp:Menu ID="MenuGlowne" runat="server" DataSourceID="MapaSerwisu" Orientation="Horizontal">
-                        <DynamicHoverStyle CssClass="ZaznaczonyElementMenu" />
                         <DynamicMenuItemStyle CssClass="ElementMenuRozwijalnego" />
-                        <StaticHoverStyle CssClass="ZaznaczonyElementMenu" />
                         <StaticMenuItemStyle CssClass="ElementMenuNadrzednego" />
                     </asp:Menu>
                 </div>
