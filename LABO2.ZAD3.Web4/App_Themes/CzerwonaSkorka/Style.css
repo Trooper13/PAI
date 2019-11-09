@@ -1,0 +1,76 @@
+﻿body {
+        font-family: Verdana;
+        font-size:  8pt;
+        color: #000033;
+        background-color:red;
+        margin:0;
+}
+#PierwszyObszarRoboczy {
+    float: left;
+    width: 200px;
+    height: 300px;
+}
+#DrugiObszarRoboczy {
+    float: right;
+    width: 200px;
+    height: 300px;
+}
+
+#Menu {
+    background-color:#b30000;
+    font-size: 7.5pt;
+}
+
+#ObszarLogowania {
+    text-align: right;
+    background-color: #C3DBEA;
+    padding-bottom:5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+#ObszarRoboczy {
+    background-color: #ff0000;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:200px;
+    margin-right:200px;
+}
+#PierwszyObszarBoczny {
+    float: left;
+    width: 200px;
+    height: 300px;
+}
+#DrugiObszarBoczny {
+    float: right;
+    width: 200px;
+    height: 300px;
+}
+
+
+
+
+.ElementMenuNadrzednego { 
+    color: #000033; 
+    font-weight: bold; 
+    padding: 3px 10px; 
+
+} 
+
+.ElementMenuRozwijanego { 
+    background: #F5F5F5; 
+    color: #000033; 
+    padding: 3px lOpx; 
+
+}
+
+
+.ZaznaczonyElementMenu {
+    background: #000033;
+    color: white;
+}
