@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SzablonStrony.master.cs" Inherits="SzablonStrony" %>
 
+<%@ Register src="Kontrolki/Kategorie.ascx" tagname="Kategorie" tagprefix="uc1" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -25,12 +27,16 @@
                 <div id="ObszarLogowania">Zaloguj</div> 
             </div> 
             <div id="Tresc">
-                <div id="PierwszyObszarBoczny">Pierwszy obszar boczny</div> 
+                <div id="PierwszyObszarBoczny">Pierwszy obszar boczny<br />
+                    <uc1:Kategorie ID="Kategorie1" runat="server" />
+                </div> 
                 <div id="DrugiObszarBoczny">Drugi obszar boczny</div> 
                 <div id="ObszarRoboczy">  
                     <a href="Ankieta.aspx?view=nowy">Nowy Klient</a><br />
                     <a href="Ankieta.aspx?view=wycieczki">Klient posiadający rower</a>
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                        </p>
                     </asp:ContentPlaceHolder>
                 </div>
             </div> 

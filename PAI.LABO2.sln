@@ -91,48 +91,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LABO2.ZAD3.AnkietaOdzieżow
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LABO3.ZAD4.Website", "LABO3.ZAD4.Website\", "{50BD434C-0C76-41C3-826E-5A138C636CC6}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_57591"
-		Debug.AspNetCompiler.PhysicalPath = "LABO3.ZAD4.Website\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57591\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_57591"
-		Release.AspNetCompiler.PhysicalPath = "LABO3.ZAD4.Website\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57591\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "57591"
-		SlnRelativePath = "LABO3.ZAD4.Website\"
-	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LABO2.ZAD3.Web4", "LABO2.ZAD3.Web4\", "{C0B538CC-E70C-4F60-B04F-C63451AA4EDB}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_51342"
-		Debug.AspNetCompiler.PhysicalPath = "LABO2.ZAD3.Web4\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51342\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_51342"
-		Release.AspNetCompiler.PhysicalPath = "LABO2.ZAD3.Web4\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51342\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "51342"
-		SlnRelativePath = "LABO2.ZAD3.Web4\"
-	EndProjectSection
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LABO2.ZAD3.Web4Lab", "LABO2.ZAD3.Web4Lab\", "{63EDAB6F-4E05-4CFC-A548-95979976DA1E}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
@@ -151,6 +109,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LABO2.ZAD3.Web4Lab", "LABO2
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "52697"
+		SlnRelativePath = "LABO2.ZAD3.Web4Lab\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -176,14 +135,6 @@ Global
 		{B53F5409-2B8F-46F3-8B33-DD4466244012}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B53F5409-2B8F-46F3-8B33-DD4466244012}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{B53F5409-2B8F-46F3-8B33-DD4466244012}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{50BD434C-0C76-41C3-826E-5A138C636CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50BD434C-0C76-41C3-826E-5A138C636CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50BD434C-0C76-41C3-826E-5A138C636CC6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{50BD434C-0C76-41C3-826E-5A138C636CC6}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{C0B538CC-E70C-4F60-B04F-C63451AA4EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0B538CC-E70C-4F60-B04F-C63451AA4EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0B538CC-E70C-4F60-B04F-C63451AA4EDB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0B538CC-E70C-4F60-B04F-C63451AA4EDB}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{63EDAB6F-4E05-4CFC-A548-95979976DA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63EDAB6F-4E05-4CFC-A548-95979976DA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63EDAB6F-4E05-4CFC-A548-95979976DA1E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
