@@ -2,6 +2,10 @@
 
 <%@ Register src="Kontrolki/Kategorie.ascx" tagname="Kategorie" tagprefix="uc1" %>
 
+<%@ Register src="Kontrolki/NoweProdukty.ascx" tagname="Produkty" tagprefix="uc2" %>
+
+<%@ Register src="Kontrolki/NoweProdukty.ascx" tagname="NoweProdukty" tagprefix="uc3" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -30,7 +34,9 @@
                 <div id="PierwszyObszarBoczny">Pierwszy obszar boczny<br />
                     <uc1:Kategorie ID="Kategorie1" runat="server" />
                 </div> 
-                <div id="DrugiObszarBoczny">Drugi obszar boczny</div> 
+                <div id="DrugiObszarBoczny">Drugi obszar boczny<br />
+                    <uc3:NoweProdukty ID="NoweProdukty1" runat="server" />
+                </div> 
                 <div id="ObszarRoboczy">  
                     <a href="Ankieta.aspx?view=nowy">Nowy Klient</a><br />
                     <a href="Ankieta.aspx?view=wycieczki">Klient posiadający rower</a>

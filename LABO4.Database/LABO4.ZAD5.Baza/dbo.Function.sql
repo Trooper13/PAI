@@ -1,0 +1,2 @@
+﻿CREATE VIEW [dbo].[View]
+	AS SELECT NEWID() AS ID
