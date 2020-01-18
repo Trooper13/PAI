@@ -15,4 +15,9 @@ public partial class Produkty : System.Web.UI.Page
             KategorieListBox.SelectedValue = katID;
         }
     }
+
+    protected void KategorieListBox_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        System.Threading.Thread.Sleep(3000);
+    }
 }

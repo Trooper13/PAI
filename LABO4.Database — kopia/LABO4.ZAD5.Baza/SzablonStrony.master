@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SzablonStrony.master.cs" Inherits="SzablonStrony" %>
+
+<%@ Register src="Kontrolki/Kategorie.ascx" tagname="Kategorie" tagprefix="uc1" %>
+
+<%@ Register src="Kontrolki/NoweProdukty.ascx" tagname="Produkty" tagprefix="uc2" %>
+
+<%@ Register src="Kontrolki/NoweProdukty.ascx" tagname="NoweProdukty" tagprefix="uc3" %>
+
+<%@ Register src="Kontrolki/Licznik.ascx" tagname="Licznik" tagprefix="uc4" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Adventure Works</title>
+    <link href="App_Themes/NiebieskaSkorka/Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <asp:WebPartManager ID="MenadzerWebPartow" runat="server">
+    </asp:WebPartManager>
+    <form id="form1" runat="server">
+        <div id="Strona">  
+            <div id="Naglowek">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/AWlogo.jpg"/>
+                <asp:SiteMapDataSource ID="MapaSerwisu" runat="server" ShowStartingNode="False" />
+                <div id="Menu">
+                    <asp:Menu ID="MenuGlowne" runat="server" DataSourceID="MapaSerwisu" Orientation="Horizontal">
+                        <DynamicMenuItemStyle CssClass="ElementMenuRozwijalnego" />
+                        <StaticMenuItemStyle CssClass="ElementMenuNadrzednego" />
+                    </asp:Menu>
+                </div>
+                <div id="ObszarLogowania">Zaloguj</div> 
+            </div> 
+            <div id="Tresc">
+                <div id="PierwszyObszarBoczny">Pierwszy obszar boczny<br />
+                    <asp:WebPartZone ID="PierwszyObszarWebPartow" runat="server"></asp:WebPartZone>
+                    <uc1:Kategorie ID="Kategorie1" runat="server" />
+                </div> 
+                <div id="DrugiObszarBoczny">Drugi obszar boczny<br />
+                    <asp:WebPartZone ID="DrugiObszarWebPartow" runat="server"></asp:WebPartZone>
+                    <uc4:Licznik ID="Licznik1" runat="server" />
+                    <br />
+                    <uc3:NoweProdukty ID="NoweProdukty1" runat="server" />
+                </div> 
+                <div id="ObszarRoboczy">  
+                    <a href="Ankieta.aspx?view=nowy">Nowy Klient</a><br />
+                    <a href="Ankieta.aspx?view=wycieczki">Klient posiadający rower</a>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                        </p>
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div> 
+        </div>
+    </form>
+</body>
+</html>

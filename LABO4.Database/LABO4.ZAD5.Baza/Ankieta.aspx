@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Ankieta.aspx.cs" Inherits="Ankieta" MasterPageFile="~/SzablonStrony.master" Title="Ankieta" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<asp:AdRotator runat="server" AdvertisementFile="~/Adv/adv.xml"></asp:AdRotator>
+    <asp:AdRotator runat="server" AdvertisementFile="~/Adv/adv.xml"></asp:AdRotator>
 
     <title></title>
 
@@ -9,6 +10,7 @@
                 <asp:View ID="ankietaGlowna" runat="server">
                     Imię:<br />
                     <asp:TextBox ID="imieTextBox" runat="server"></asp:TextBox>
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="imieTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="imieTextBox_TextBoxWatermarkExtender" TargetControlID="imieTextBox" WatermarkCssClass="watermarked" WatermarkText="Podaj imię" />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="imieTextBox" ErrorMessage="Pole Imię jest wymagane">*</asp:RequiredFieldValidator>
                     <br />
                     Płeć:<br />
@@ -20,32 +22,44 @@
                     <br />
                     e-mail:<br />
                     <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="emailTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="emailTextBox_TextBoxWatermarkExtender" TargetControlID="emailTextBox" WatermarkCssClass="watermarked" WatermarkText="Podaj email" />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="emailTextBox" ErrorMessage="Pole email jest wymgane">*</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="emailTextBox" ErrorMessage="Nieporpawny adres email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                     <br />
                     Telefon:<br />
                     <asp:TextBox ID="telefonTextBox" runat="server"></asp:TextBox>
+                    <ajaxToolkit:FilteredTextBoxExtender ID="telefonTextBox_FilteredTextBoxExtender" runat="server" BehaviorID="telefonTextBox_FilteredTextBoxExtender" FilterType="Numbers" TargetControlID="telefonTextBox" />
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="telefonTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="telefonTextBox_TextBoxWatermarkExtender" TargetControlID="telefonTextBox" WatermarkCssClass="watermarked" WatermarkText="Podaj nr telefonu" />
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="telefonTextBox" ErrorMessage="Niepoprawny nr telefonu" ValidationExpression="([0-9]+)$">*</asp:RegularExpressionValidator>
                     <br />
                     Ulica:<br />
                     <asp:TextBox ID="ulicaTextBox" runat="server"></asp:TextBox>
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="ulicaTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="ulicaTextBox_TextBoxWatermarkExtender" TargetControlID="ulicaTextBox" WatermarkCssClass="watermarked" WatermarkText="Podaj ulicę" />
                     <br />
                     Nr. domu<br />
                     <asp:TextBox ID="nrDomuTextBox" runat="server"></asp:TextBox>
+                    <ajaxToolkit:FilteredTextBoxExtender ID="nrDomuTextBox_FilteredTextBoxExtender" runat="server" BehaviorID="nrDomuTextBox_FilteredTextBoxExtender" FilterType="Numbers" TargetControlID="nrDomuTextBox" />
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="nrDomuTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="nrDomuTextBox_TextBoxWatermarkExtender" TargetControlID="nrDomuTextBox" WatermarkCssClass="watermarked" WatermarkText="Podaj nr domu" />
                     <br />
                     Nr. mieszkania<br />
                     <asp:TextBox ID="mieszkanieTextBox" runat="server"></asp:TextBox>
+                    <ajaxToolkit:FilteredTextBoxExtender ID="mieszkanieTextBox_FilteredTextBoxExtender" runat="server" BehaviorID="mieszkanieTextBox_FilteredTextBoxExtender" FilterType="Numbers" TargetControlID="mieszkanieTextBox" />
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="mieszkanieTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="mieszkanieTextBox_TextBoxWatermarkExtender" TargetControlID="mieszkanieTextBox" WatermarkCssClass="watermarked" WatermarkText="Podaj nr mieszkania" />
                     <br />
                     Kod pocztowy:<br />
                     <asp:TextBox ID="kodPocztowyTextBox" runat="server"></asp:TextBox>
+                    <ajaxToolkit:FilteredTextBoxExtender ID="kodPocztowyTextBox_FilteredTextBoxExtender" runat="server" BehaviorID="kodPocztowyTextBox_FilteredTextBoxExtender" FilterType="Custom, Numbers" TargetControlID="kodPocztowyTextBox" ValidChars="-" />
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="kodPocztowyTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="kodPocztowyTextBox_TextBoxWatermarkExtender" TargetControlID="kodPocztowyTextBox" WatermarkCssClass="watermarked" WatermarkText="Podaj kod pocztowy" />
                     <br />
                     Miejscowość:<br />
                     <asp:TextBox ID="miejscowoscTextBox" runat="server"></asp:TextBox>
+                    <ajaxToolkit:TextBoxWatermarkExtender ID="miejscowoscTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="miejscowoscTextBox_TextBoxWatermarkExtender" TargetControlID="miejscowoscTextBox" WatermarkCssClass="watermarked" WatermarkText="Podaj miejscowość" />
                     <br />
                     <asp:MultiView ID="ankietaMultiView" runat="server">
                         <asp:View ID="nowyView" runat="server">
                             Wzrost:<br />
                             <asp:TextBox ID="wzrostTextBox" runat="server" Width="128px"></asp:TextBox>
+                            <ajaxToolkit:FilteredTextBoxExtender ID="wzrostTextBox_FilteredTextBoxExtender" runat="server" BehaviorID="wzrostTextBox_FilteredTextBoxExtender" FilterType="Numbers" TargetControlID="wzrostTextBox" />
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="wzrostTextBox" ErrorMessage="Niepoprawny wzrost - podaj wzrost w centymetrach">*</asp:RegularExpressionValidator>
                             <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="wzrostTextBox" ErrorMessage="Podaj poprawny wzrost w przedziale 50-250cm" MaximumValue="250" MinimumValue="50" Type="Integer">*</asp:RangeValidator>
                             <br />
@@ -85,10 +99,12 @@
                             </asp:RadioButtonList>
                             od:
                             <asp:TextBox ID="odTextBox" runat="server"></asp:TextBox>
+                            <ajaxToolkit:FilteredTextBoxExtender ID="odTextBox_FilteredTextBoxExtender" runat="server" BehaviorID="odTextBox_FilteredTextBoxExtender" FilterType="Numbers" TargetControlID="odTextBox" />
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="odTextBox" ErrorMessage="Nieprawidłowa kwota - podaj zaokrąglając do pełnych złotych" ValidationExpression="([0-9]+)$">*</asp:RegularExpressionValidator>
                             <br />
                             do:
                             <asp:TextBox ID="doTextBox" runat="server"></asp:TextBox>
+                            <ajaxToolkit:FilteredTextBoxExtender ID="doTextBox_FilteredTextBoxExtender" runat="server" BehaviorID="doTextBox_FilteredTextBoxExtender" FilterType="Numbers" TargetControlID="doTextBox" />
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="doTextBox" ErrorMessage="Nieprawidłowa kwota - podaj zaokraglając do pełnych złotych" ValidationExpression="([0-9]+)$">*</asp:RegularExpressionValidator>
                             <br />
                         </asp:View>
@@ -104,30 +120,17 @@
                             </asp:ListBox>
                             <br />
                             Data ostatniej wycieczki:
-                            <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
-                                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
-                                <NextPrevStyle VerticalAlign="Bottom" />
-                                <OtherMonthDayStyle ForeColor="#808080" />
-                                <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
-                                <SelectorStyle BackColor="#CCCCCC" />
-                                <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
-                                <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
-                                <WeekendDayStyle BackColor="#FFFFCC" />
-                            </asp:Calendar>
+                            <asp:TextBox ID="ostatniaTextBox" runat="server"></asp:TextBox>
+                            <ajaxToolkit:CalendarExtender ID="ostatniaTextBox_CalendarExtender" runat="server" BehaviorID="ostatniaTextBox_CalendarExtender" FirstDayOfWeek="Monday" TargetControlID="ostatniaTextBox" />
+                            <ajaxToolkit:TextBoxWatermarkExtender ID="ostatniaTextBox_TextBoxWatermarkExtender" runat="server" BehaviorID="ostatniaTextBox_TextBoxWatermarkExtender" TargetControlID="ostatniaTextBox" WatermarkCssClass="watermarked" WatermarkText="Poda datę ostatniej wycieczki" />
                             <br />
-                            Data następnej wycieczki:<asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
-                                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
-                                <NextPrevStyle VerticalAlign="Bottom" />
-                                <OtherMonthDayStyle ForeColor="#808080" />
-                                <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
-                                <SelectorStyle BackColor="#CCCCCC" />
-                                <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
-                                <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
-                                <WeekendDayStyle BackColor="#FFFFCC" />
-                            </asp:Calendar>
+                            Data następnej wycieczki:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <ajaxToolkit:CalendarExtender ID="TextBox1_CalendarExtender" runat="server" BehaviorID="TextBox1_CalendarExtender" FirstDayOfWeek="Monday" TargetControlID="TextBox1" />
+                            <ajaxToolkit:TextBoxWatermarkExtender ID="TextBox1_TextBoxWatermarkExtender" runat="server" BehaviorID="TextBox1_TextBoxWatermarkExtender" TargetControlID="TextBox1" WatermarkCssClass="watermarked" WatermarkText="Podaj datę następnej wycieczki" />
                             <br />
                             Średnia ilość przejechanych kilometrów na wycieczce:
                             <asp:TextBox ID="kmTextBox" runat="server"></asp:TextBox>
+                            <ajaxToolkit:CalendarExtender ID="kmTextBox_CalendarExtender" runat="server" BehaviorID="kmTextBox_CalendarExtender" FirstDayOfWeek="Monday" TargetControlID="kmTextBox" />
                             <br />
                             Poziom umiejętności:<br />
                             <asp:DropDownList ID="poziomDropDownList" runat="server">

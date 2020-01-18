@@ -6,6 +6,10 @@
 
 <%@ Register src="Kontrolki/NoweProdukty.ascx" tagname="NoweProdukty" tagprefix="uc3" %>
 
+<%@ Register src="Kontrolki/Licznik.ascx" tagname="Licznik" tagprefix="uc4" %>
+
+<%@ Register src="Kontrolki/Reklama.ascx" tagname="Reklama" tagprefix="uc5" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -17,6 +21,8 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <asp:WebPartManager ID="MenadzerWebPartow" runat="server">
+    </asp:WebPartManager>
     <form id="form1" runat="server">
         <div id="Strona">  
             <div id="Naglowek">
@@ -32,9 +38,18 @@
             </div> 
             <div id="Tresc">
                 <div id="PierwszyObszarBoczny">Pierwszy obszar boczny<br />
+                    <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
+                    </asp:ScriptManager>
+                    <br />
+                    <asp:WebPartZone ID="PierwszyObszarWebPartow" runat="server"></asp:WebPartZone>
                     <uc1:Kategorie ID="Kategorie1" runat="server" />
                 </div> 
                 <div id="DrugiObszarBoczny">Drugi obszar boczny<br />
+                    <uc5:Reklama ID="Reklama1" runat="server" />
+                    <br />
+                    <asp:WebPartZone ID="DrugiObszarWebPartow" runat="server"></asp:WebPartZone>
+                    <uc4:Licznik ID="Licznik1" runat="server" />
+                    <br />
                     <uc3:NoweProdukty ID="NoweProdukty1" runat="server" />
                 </div> 
                 <div id="ObszarRoboczy">  
