@@ -34,23 +34,41 @@
                         <StaticMenuItemStyle CssClass="ElementMenuNadrzednego" />
                     </asp:Menu>
                 </div>
-                <div id="ObszarLogowania">Zaloguj</div> 
+                <div id="ObszarLogowania">Zaloguj
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <a href="Zarejestruj.aspx">Zarejestruj</a>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            &quot;Witaj &quot;
+                        </LoggedInTemplate>
+
+                    </asp:LoginView> 
+                    <asp:LoginName ID="LoginName1" runat="server" />
+                    | <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="LinkObszaruLogowania" LoginText="Zaloguj" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" LogoutText="Wyloguj" />
+
+                </div>
             </div> 
             <div id="Tresc">
                 <div id="PierwszyObszarBoczny">Pierwszy obszar boczny<br />
                     <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
                     </asp:ScriptManager>
                     <br />
-                    <asp:WebPartZone ID="PierwszyObszarWebPartow" runat="server"></asp:WebPartZone>
-                    <uc1:Kategorie ID="Kategorie1" runat="server" />
+                    <asp:WebPartZone ID="PierwszyObszarWebPartow" runat="server">
+                        <ZoneTemplate>
+						    <uc1:Kategorie ID="Kategorie1" runat="server" />
+                        </ZoneTemplate>
+					</asp:WebPartZone>
                 </div> 
                 <div id="DrugiObszarBoczny">Drugi obszar boczny<br />
                     <uc5:Reklama ID="Reklama1" runat="server" />
-                    <br />
-                    <asp:WebPartZone ID="DrugiObszarWebPartow" runat="server"></asp:WebPartZone>
-                    <uc4:Licznik ID="Licznik1" runat="server" />
-                    <br />
-                    <uc3:NoweProdukty ID="NoweProdukty1" runat="server" />
+						<br />
+					<asp:WebPartZone ID="DrugiObszarWebPartow" runat="server">
+						<ZoneTemplate>
+						<uc4:Licznik ID="Licznik1" runat="server" />
+						<uc3:NoweProdukty ID="NoweProdukty1" runat="server" />
+						</ZoneTemplate>
+					</asp:WebPartZone>
                 </div> 
                 <div id="ObszarRoboczy">  
                     <a href="Ankieta.aspx?view=nowy">Nowy Klient</a><br />

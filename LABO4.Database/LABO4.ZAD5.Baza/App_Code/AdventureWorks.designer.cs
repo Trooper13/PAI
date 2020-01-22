@@ -2283,7 +2283,7 @@ public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThumbNailPhoto", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThumbNailPhoto", DbType="VarBinary(MAX)", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
 	public System.Data.Linq.Binary ThumbNailPhoto
 	{
 		get
@@ -2977,7 +2977,7 @@ public partial class ProductModel : INotifyPropertyChanging, INotifyPropertyChan
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CatalogDescription", DbType="Xml", UpdateCheck=UpdateCheck.Never)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CatalogDescription", DbType="Xml", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
 	public System.Xml.Linq.XElement CatalogDescription
 	{
 		get
